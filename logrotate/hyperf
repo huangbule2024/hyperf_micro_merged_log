@@ -1,0 +1,10 @@
+/var/log/hyperf.log {
+        size 200M
+        missingok
+        rotate 7
+        compress
+        su root root
+        postrotate
+           /usr/bin/supervisorctl restart logMerged
+        endscript
+}
